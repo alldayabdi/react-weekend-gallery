@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import axios from 'axios'
 
-function GetGalleryList(){
-    axios.get('/gallery').then((response) => {
-        console.log('this is the response from getGalleryList', response.data);
-
-      })
-
+function GalleryList(){
+    
       return (
-          null
+         <>
+        <img src="images/goat_small.jpg"/>
+        <img src="images/lion.jpg"/>
+        <img src="images/camel.jpg"/> 
+        </>
       )
     
 }
