@@ -1,5 +1,10 @@
-import React from 'react';
+// import React from 'react';
 import './App.css';
+import React, {useState} from 'react'
+import GetGalleryList from '../GalleryList/GalleryList';
+import axios from 'axios'
+
+
 
 function App() {
     return (
@@ -8,9 +13,10 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        {/* <img src="images/goat_small.jpg"/>
         <img src="images/lion.jpg"/>
-        <img src="images/camel.jpg"/>
+        <img src="images/camel.jpg"/> */}
+        <GetGalleryList />
       </div>
     );
 }
