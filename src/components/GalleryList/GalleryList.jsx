@@ -1,17 +1,30 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import axios from 'axios'
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList(){
+
+
+function GalleryList({
+    galleryList,
+    getGallery
+}){
+//  let [galleryList, setGalleryList] = useState([]);
     
       return (
          <>
-        <img src="images/goat_small.jpg"/>
-        <img src="images/lion.jpg"/>
-        <img src="images/camel.jpg"/> 
+     <ul>
+         {galleryList.map(gallery => 
+            <GalleryItem key={gallery.id}
+             gallery={gallery}
+             getGallery ={getGallery}
+            />
+            
+            )}
+        </ul> 
         </>
       )
     
 }
 
-export default GetGalleryList;
+export default GalleryList;
