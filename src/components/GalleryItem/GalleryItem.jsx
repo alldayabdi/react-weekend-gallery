@@ -1,5 +1,6 @@
-import React from "react";
+// import React from "react";
 import axios from 'axios'
+import React, {useState} from 'react'
 
 function GalleryItem ({
     fetchGallery,
@@ -21,7 +22,17 @@ function GalleryItem ({
     };
     return (
         <>
-        <img src ={photo.path} />
+       <div className="container" key={photo.id}>
+        {isImageFlipped ?
+        <>
+        <img src={photo.path} onClick={() =>flipImage(photo.id)}></img>
+        <p className= "likeBar"><button onClick={() =>addLikes(photo.id)}>Like</button>{photo.likes} people liked this</p>
+        </>:<>
+        <p className= "desc likeBar"onClick={() =>flipImage(photo.id)}>{photo.description}</p>
+        <p className= "likeBar"><button onClick={() =>addLikes(photo.id)}><span>Like</span></button>Likes:{photo.likes}</p>
+        </>}
+        </div>
+    )
         
         </>
     )
