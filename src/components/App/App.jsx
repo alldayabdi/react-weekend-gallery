@@ -8,7 +8,7 @@ import axios from 'axios'
 
 function App() {
    let [galleryList, setGalleryList] = useState([]);
-  const getGallery = () => {
+  const fetchGallery = () => {
     axios({
         method: 'GET',
         url: '/gallery'
@@ -23,7 +23,7 @@ function App() {
 }
 useEffect(() =>{
   console.log('in useEffect');
-  getGallery();
+  fetchGallery();
 }, [])
     return (
       <div className="App">
@@ -33,7 +33,7 @@ useEffect(() =>{
         <p>Gallery goes here</p>
         <GalleryList
         galleryList= {galleryList} 
-        getGallery = {getGallery}
+        fetchGallery = {fetchGallery}
         />
       </div>
     );

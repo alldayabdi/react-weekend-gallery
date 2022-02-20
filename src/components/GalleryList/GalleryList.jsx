@@ -6,18 +6,20 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 function GalleryList({
+    // Pass down get function alongside list 
     galleryList,
-    getGallery
+    fetchGallery
 }){
-//  let [galleryList, setGalleryList] = useState([]);
     
       return (
          <>
      <ul>
-         {galleryList.map(gallery => 
-            <GalleryItem key={gallery.id}
-             gallery={gallery}
-             getGallery ={getGallery}
+         
+         {galleryList.map(photo => 
+            <GalleryItem
+             key={photo.id}
+             photo={photo}
+             fetchGallery ={fetchGallery}
             />
             
             )}
