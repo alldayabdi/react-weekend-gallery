@@ -15,6 +15,7 @@ function App() {
     }).then( (response) => {
         console.log('Entire response is', response.data);
         // console.log('Just data', response.data);
+        //Passing response data through SetGalleryList array
         setGalleryList(response.data);
     }).catch((error) => {
         console.log('Error getting list', error);
@@ -32,6 +33,7 @@ useEffect(() =>{
         </header>
         <p>Gallery goes here</p>
         <GalleryList
+        // Pass down galleryList variable and also GET function
         galleryList= {galleryList} 
         fetchGallery = {fetchGallery}
         />

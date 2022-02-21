@@ -1,9 +1,3 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
-## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This project was focused on practicing with React and specifically props, I spent 2 days roughly working on it, I had an issue with naming conventions so I had to work back and change names to better understand what I was attempting to do. The focus of my work was functionality, can a user like a photo and also click the description to see it. Which I was able to do.
