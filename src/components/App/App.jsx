@@ -31,7 +31,7 @@ useEffect(() =>{
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
+       
         <GalleryList
         // Pass down galleryList variable and also GET function
         galleryList= {galleryList} 

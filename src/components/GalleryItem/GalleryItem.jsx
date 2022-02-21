@@ -34,6 +34,7 @@ function GalleryItem ({
         </>
         :<>
         <p className= "desc likeBar"onClick={() =>flipImage(photo.id)}>{photo.description}</p>
+        
         <p className= "likeBar"><button onClick={() =>addLikes(photo.id)}><span>Like</span></button>Likes:{photo.likes}</p>
         </>}
         </div>
